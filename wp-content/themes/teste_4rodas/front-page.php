@@ -48,18 +48,18 @@ get_header(); ?>
 
         <section id="figuras">
           <ul>
-						<?php
-						/* Start the Loop */
-						$myquery = new WP_Query('category_name=figuras&posts_per_page=4');
-						while ( $myquery->have_posts() ) : $myquery->the_post();
-							?>
-							<li>
-								<?php the_post_thumbnail(); ?>
-								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-								<span><?php echo get_post_meta($post->ID, 'resumo', true); ?></span>
-								<span><?php echo get_post_meta($post->ID, 'link', true); ?></span>
-							</li>
-						<?php endwhile; ?>
+            <?php
+            /* Start the Loop */
+            $myquery = new WP_Query('category_name=figuras&posts_per_page=4');
+            while ( $myquery->have_posts() ) : $myquery->the_post();
+                ?>
+                <li>
+                    <?php the_post_thumbnail(); ?>
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                    <span><?php echo get_post_meta($post->ID, 'resumo', true); ?></span>
+                    <span><?php echo get_post_meta($post->ID, 'link', true); ?></span>
+                </li>
+            <?php endwhile; ?>
           </ul>
         </section>
       </div>
