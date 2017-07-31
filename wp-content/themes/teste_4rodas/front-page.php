@@ -17,8 +17,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-      <!-- Inicio da Homepage -->          
-
+      <!-- Inicio da Homepage -->
+			<p>teste</p>
       <div class="wrapper">
         <section id="principal">
           <div id="figura-principal-1">
