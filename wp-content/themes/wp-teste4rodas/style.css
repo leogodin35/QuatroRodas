@@ -38,6 +38,10 @@ h1.logo {
 		margin-bottom: 10px !important;
 }
 
+.navibar-top {
+  padding-top: 10px !important;
+}
+
 .margin-top {
 	padding: 10px !important;
 }
@@ -70,6 +74,9 @@ h1.logo {
 		font-size: 1em;
 		transition: all .5s;
 	}
+  .row-black {
+    margin: 20px 0 0 0;
+  }
 }
 
 @media (min-width:880px) and (max-width:1024px) {
