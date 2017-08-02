@@ -5,21 +5,24 @@
     <?php
 		while ( have_posts() ) : the_post();
     ?>
-      <div class="col-md-12">
-				<h2><?php the_title(); ?></h2>
-			</div>
-      <?php
-			the_post();
-      the_post_thumbnail(false, array('class'=>'img-responsive'));
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-	</div>
+      <article class="">
+        <div class="col-md-10 col-md-offset-2">
+  				<h2><?php the_title(); ?></h2>
+  			</div>
+        <div class="col-md-10 col-md-offset-2">
+          <?php the_post_thumbnail(false, array('class'=>'img-responsive')); ?>
+        </div>
+        <div class="col-md-10 col-md-offset-2">
+  				<p><?php the_content(); ?></p>
+  			</div>
+        <div class="col-md-10 col-md-offset-2">
+  				<a href="#"><span><?php echo get_post_meta($post->ID, 'link', true); ?></span></a>
+  			</div>        
+      </article>
+    <?php
+    endwhile;
+    ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
